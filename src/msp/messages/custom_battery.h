@@ -1,5 +1,5 @@
-#ifndef REBOOT_H
-#define REBOOT_H
+#ifndef CUSTOM_BATTERY_H
+#define CUSTOM_BATTERY_H
 
 #include "base.h"
 #include <cstdint>
@@ -28,4 +28,4 @@ class BATTERY_REQUEST : public MSPBaseV2 {
 } // namespace Messages
 } // namespace MSP
 
-#endif // REBOOT_H
+#endif // CUSTOM_BATTERY_H
