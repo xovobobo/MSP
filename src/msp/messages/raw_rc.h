@@ -3,6 +3,10 @@
 
 #include "base.h"
 
+#ifndef MSP_RC_CHANNEL_COUNT
+#define MSP_RC_CHANNEL_COUNT 16
+#endif
+
 namespace MSP {
 
 namespace Messages {
@@ -13,7 +17,7 @@ class SET_RAW_RC_Request : public MSPBaseV2 {
 
 #pragma pack(push, 1)
     struct Data {
-        uint16_t channels[8] = {1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000};
+        uint16_t channels[MSP_RC_CHANNEL_COUNT] = {1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000};
     } data;
 #pragma pack(pop)
 
