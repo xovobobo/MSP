@@ -132,7 +132,6 @@ void MSPCommunicator::writeLoop() {
 
 void MSPCommunicator::pushMessage(const std::shared_ptr<MSP::Messages::MSPBaseV2> &message) {
     if (!running) {
-        std::cerr << "Start MSPCommunicator first";
         return;
     }
 
