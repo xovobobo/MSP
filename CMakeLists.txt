@@ -14,6 +14,7 @@ add_library(MSPMessages INTERFACE
     src/msp/messages/raw_rc.h
     src/msp/messages/reboot.h
     src/msp/messages/motor.h
+    src/msp/messages/servo.h
     src/msp/messages/custom_battery.h
 )
 
