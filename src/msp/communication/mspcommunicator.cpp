@@ -45,6 +45,7 @@ bool MSPCommunicator::stop() {
     if (writeThread.joinable())
         writeThread.join();
 
+    iface->stop();
     printf("[MSP] writThread joined\n");
 
     // clear write queue
