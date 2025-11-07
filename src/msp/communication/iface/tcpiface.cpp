@@ -20,7 +20,7 @@ bool TcpIface::connect() {
     }
 
     try {
-        socket.connect(ip::tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 5761));
+        socket.connect(ip::tcp::endpoint(boost::asio::ip::address::from_string(msp_ip),msp_port));
         connectedState = true;
     } catch (boost::system::system_error &e) {
         // printf("Connection failed (Boost error) : %s\n", e.what());
@@ -100,3 +100,9 @@ void TcpIface::stop() {
 }
 
 bool TcpIface::isConnected() const { return connectedState; }
+
+void TcpIface::setAddress(std::string ip, uint16_t port)
+{
+    msp_ip = ip;
+    msp_port = port;
+}
