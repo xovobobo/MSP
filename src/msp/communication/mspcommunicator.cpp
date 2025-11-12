@@ -1,7 +1,7 @@
 #include "mspcommunicator.h"
 #include <msp/messages/base.h>
 
-MSPCommunicator::MSPCommunicator() : iface(nullptr), running(false), readState(ReadState::WAIT_FIRST_BYTE), readedIdx(0) {}
+MSPCommunicator::MSPCommunicator() : readState(ReadState::WAIT_FIRST_BYTE), readedIdx(0), running(false), iface(nullptr) {}
 
 MSPCommunicator::~MSPCommunicator() { stop(); }
 
