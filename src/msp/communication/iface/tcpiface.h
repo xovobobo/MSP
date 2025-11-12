@@ -25,6 +25,7 @@ class TcpIface : public AbsIface {
     uint16_t msp_port = 9001;
 
   protected:
+    bool connectedState;
     size_t write(char *data, size_t length) override;
 };
 

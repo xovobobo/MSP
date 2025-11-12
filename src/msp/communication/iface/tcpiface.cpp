@@ -8,7 +8,7 @@
 #include <iostream>
 #include <mutex>
 
-TcpIface::TcpIface() : AbsIface(), socket(io_context) {}
+TcpIface::TcpIface() : AbsIface(), socket(io_context), connectedState(false) {}
 
 TcpIface::~TcpIface() { stop(); }
 
